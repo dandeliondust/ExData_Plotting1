@@ -11,8 +11,8 @@ rawdata <- read.csv.sql("household_power_consumption.txt", sql="SELECT * FROM
 rawdata$DateTime <- strptime(paste(rawdata$Date, rawdata$Time), 
                              "%d/%m/%Y %H:%M:%S")
 
-## Create 'myplot1.png' in working directory
-png(filename="myplot1.png", width=480, height=480)
+## Create 'plot1.png' in working directory
+png(filename="plot1.png", width=480, height=480, bg="transparent")
 
 ## Create the histogram and send to the PNG file
 hist(rawdata$Global_active_power, col="red", main="Global Active Power", 

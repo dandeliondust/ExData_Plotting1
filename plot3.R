@@ -11,8 +11,8 @@ rawdata <- read.csv.sql("household_power_consumption.txt", sql="SELECT * FROM
 rawdata$DateTime <- strptime(paste(rawdata$Date, rawdata$Time), 
                              "%d/%m/%Y %H:%M:%S")
 
-## Create 'myplot3.png' in working directory
-png(filename="myplot3.png", width=480, height=480)
+## Create 'plot3.png' in working directory
+png(filename="plot3.png", width=480, height=480, bg="transparent")
 
 ## Create the plot and send to the PNG file
 plot(rawdata$DateTime, rawdata$Sub_metering_1, type="l", xlab="",
